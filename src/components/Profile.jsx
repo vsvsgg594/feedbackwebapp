@@ -36,7 +36,7 @@ const UserProfile = () => {
         setFeedbacks(fbData.feedback || []);
       } catch (err) {
         console.error(err);
-        setError('Failed to load profile or feedbacks');
+        // setError('Failed to load profile or feedbacks');
       } finally {
         setLoading(false);
       }
@@ -63,7 +63,7 @@ const UserProfile = () => {
       setAdminComments(res.data.comments || []);
     } catch (err) {
       console.error(err);
-      setErrorComments(err.response?.data?.message || 'Failed to load admin comments');
+      // setErrorComments(err.response?.data?.message || 'Failed to load admin comments');
     } finally {
       setLoadingComments(false);
     }
@@ -85,7 +85,7 @@ const UserProfile = () => {
       setActiveTab('feedbacks');
     } catch (err) {
       console.error(err);
-      setError('Failed to submit feedback');
+      // setError('Failed to submit feedback');
     } finally {
       setSubmitting(false);
     }
